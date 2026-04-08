@@ -24,3 +24,4 @@ Praktikum 5
 <img width="1919" height="947" alt="Screenshot 2026-04-08 093732" src="https://github.com/user-attachments/assets/35c5a7d2-a849-4cb0-8b73-81a2cd4b26da" />
 
 
+[230104040206_Syfa Aulia_Praktikum 6.pdf](https://github.com/user-attachments/files/26558366/230104040206_Syfa.Aulia_Praktikum.6.pdf)
