@@ -9,6 +9,9 @@ Praktikum 4
 <img width="1920" height="1080" alt="Screenshot 2026-04-07 164538" src="https://github.com/user-attachments/assets/5319be99-623d-4538-90ad-236347d9748b" />
 <img width="1920" height="1080" alt="Screenshot 2026-04-07 164745" src="https://github.com/user-attachments/assets/94d3650b-b1a1-4122-8256-79c9cd3ad113" />
 
+
+
+
 Praktikum 5
 <img width="1918" height="1079" alt="Screenshot 2026-04-08 093123" src="https://github.com/user-attachments/assets/e178da0d-7250-4494-98a2-f29811aae7c9" />
 <img width="1919" height="1079" alt="Screenshot 2026-04-08 093206" src="https://github.com/user-attachments/assets/57bf851a-a6b9-4306-a544-dc71d706a1f4" />
