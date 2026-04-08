@@ -17,9 +17,10 @@ from analytics import transportation_analytics as ta
 from alerts import transportation_alert as alert
 
 # ===========================
-# CONFIG
+# CONFIG (LANGKAH 5: OPTIMASI)
 # ===========================
 DATA_PATH = "data/serving/transportation"
+REFRESH_INTERVAL = 5 # Jeda 5 detik agar performa stabil
 
 st.set_page_config(
     page_title="Smart Transportation Dashboard",
@@ -27,10 +28,10 @@ st.set_page_config(
 )
 
 st.title("🚗 Smart Transportation - Real-Time Analytics")
+
 # ===========================
 # AUTO REFRESH
 # ===========================
-REFRESH_INTERVAL = 5
 placeholder = st.empty()
 
 # ===========================
@@ -96,21 +97,29 @@ while True:
         st.divider()
 
         # ===========================
-        # VISUALISASI
+        # VISUALISASI (LANGKAH 4 & 5)
         # ===========================
         try:
             col1, col2 = st.columns(2)
 
             with col1:
-                st.subheader("🚗 Fare per Location")
-                st.bar_chart(ta.fare_per_location(df))
+                # 1. Traffic Density
+                st.subheader("🚗 Fare per Location (Traffic Density)")
+                st.bar_chart(ta.fare_per_location(df)) 
 
             with col2:
+                # 3. Vehicle Distribution
                 st.subheader("🛵 Vehicle Distribution")
-                st.bar_chart(ta.vehicle_distribution(df))
+                st.bar_chart(ta.vehicle_distribution(df)) 
 
-            st.subheader("📈 Mobility Trend")
-            st.line_chart(ta.mobility_trend(df))
+            # Traffic Volume (Windowing / Resample)
+            st.subheader("📊 Traffic Volume per Minute")
+            st.line_chart(ta.traffic_per_window(df))
+
+            # 2. Mobility Trend (Sampling / Downsampled)
+            st.subheader("📈 Mobility Trend (Downsampled)")
+            df_sample = df.tail(1000) # Hanya ambil 1000 data terakhir agar ringan
+            st.line_chart(df_sample['fare']) 
 
         except Exception as e:
             st.warning(f"Visualization error: {e}")
@@ -125,7 +134,7 @@ while True:
             anomaly_df = ta.detect_anomaly(df)
 
             if not anomaly_df.empty:
-                st.dataframe(anomaly_df.tail(20))
+                st.dataframe(anomaly_df.tail(20)) # Batasi baris yang tampil
             else:
                 st.success("No anomalies detected")
         except Exception as e:
@@ -134,9 +143,12 @@ while True:
         st.divider()
 
         # ===========================
-        # LIVE DATA
+        # LIVE DATA (LANGKAH 4: LIMITED ROW)
         # ===========================
-        st.subheader("📋 Live Trip Data")
-        st.dataframe(df.tail(50))
+        st.subheader("📋 Live Trip Data (Limited 50 Rows)")
+        # 4. Real-Time Table (LIMITED ROW)
+        # Penting: Jangan tampilkan seluruh data -> akan crash
+        st.dataframe(df.tail(50)) 
 
+    # Jeda Refresh (Langkah 5)
     time.sleep(REFRESH_INTERVAL)

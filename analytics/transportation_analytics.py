@@ -66,20 +66,35 @@ def fare_per_location(df):
     if df.empty:
         return pd.Series()
 
+    # Menggunakan .groupby() (Langkah 5)
     return df.groupby("location")["fare"].sum().sort_values(ascending=False)
 
 def vehicle_distribution(df):
     if df.empty:
         return pd.Series()
 
+    # Menggunakan .groupby() (Langkah 5)
     return df.groupby("vehicle_type").size().sort_values(ascending=False)
 
 def mobility_trend(df):
     if df.empty:
         return pd.Series()
 
+    # Menggunakan .resample() (Langkah 5)
     df = df.set_index("timestamp")
     return df["fare"].resample("10s").sum()
+
+# --- FUNGSI TAMBAHAN SESUAI PERMINTAAN ---
+def traffic_per_window(df): 
+    if df.empty: 
+        return None 
+     
+    df['timestamp'] = pd.to_datetime(df['timestamp']) 
+     
+    # Menggunakan .resample() (Langkah 5)
+    return df.set_index('timestamp') \
+             .resample('1min') \
+             .size()
 
 # ===========================
 # ANOMALY DETECTION
@@ -88,5 +103,5 @@ def detect_anomaly(df):
     if df.empty:
         return pd.DataFrame()
 
-    # contoh: fare tinggi dianggap anomali
+    # Contoh: fare tinggi dianggap anomali
     return df[df["fare"] > 80000]
