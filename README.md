@@ -28,7 +28,7 @@ Repository ini berisi kumpulan file praktikum yang telah dikerjakan sebagai bagi
 ### 📄 Praktikum 7
  
 🔗 File:  
-👉 [Download Praktikum 7]((https://github.com/user-attachments/files/26589005/230104040206_Syfa.Aulia_Praktikum.7.pdf)
+👉 [Download Praktikum 7](https://github.com/user-attachments/files/26589005/230104040206_Syfa.Aulia_Praktikum.7.pdf)
 )
 
 ---
