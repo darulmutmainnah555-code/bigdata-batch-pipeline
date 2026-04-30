@@ -32,6 +32,14 @@ Repository ini berisi kumpulan file praktikum yang telah dikerjakan sebagai bagi
 
 
 ---
+### 📄 Praktikum 8
+ 
+🔗 File:  
+👉 [Download Praktikum 8](https://github.com/user-attachments/files/26815089/230104040206_Syfa.Aulia_Praktikum.8.pdf)
+
+
+
+---
 
 
 ## 👩‍💻 Author
