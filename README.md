@@ -37,13 +37,20 @@ Repository ini berisi kumpulan file praktikum yang telah dikerjakan sebagai bagi
 🔗 File:  
 👉 [Download Praktikum 8](https://github.com/user-attachments/files/26815089/230104040206_Syfa.Aulia_Praktikum.8.pdf)
 
+---
+### 📄 Praktikum 9
+ 
+🔗 File:  
+👉 [Download Praktikum 9](https://github.com/user-attachments/files/27227661/2301040400206_Syfa.Aulia_Praktikum.9.pdf)
+
+
 
 
 ---
 
 
 ## 👩‍💻 Author
-**Syfa Aulia**  
+**Syfa Aulia Darul Mutmainnah**  
 NIM: 230104040206  
 
 ---
