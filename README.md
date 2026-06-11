@@ -43,6 +43,13 @@ Repository ini berisi kumpulan file praktikum yang telah dikerjakan sebagai bagi
 🔗 File:  
 👉 [Download Praktikum 9](https://github.com/user-attachments/files/27227661/2301040400206_Syfa.Aulia_Praktikum.9.pdf)
 
+---
+### 📄 UAS TEKNOLOGI BIG DATA
+ 
+🔗 File:  
+👉 [Download File UAS Teknologi Big Data](https://github.com/user-attachments/files/28822339/Syfa.Aulia_230104040206_UAS.pdf)
+
+
 
 
 
